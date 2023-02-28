@@ -9,7 +9,7 @@ interface IContact {
   favorite: boolean
 }
 
-export default function Contact() {
+export const Contact = () => {
   const contact: IContact = {
     first: 'Your',
     last: 'Name',
@@ -72,7 +72,7 @@ export default function Contact() {
   )
 }
 
-function Favorite({ contact }: { contact: IContact }) {
+const Favorite = ({ contact }: { contact: IContact }) => {
   // yes, this is a `let` for later
   let favorite = contact.favorite
   return (
